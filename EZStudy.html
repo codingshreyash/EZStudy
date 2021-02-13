@@ -75,13 +75,13 @@
                     <a class="nav-link page-scroll" href="#intro">Get Started</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#services">Learn</a>
+                    <a class="nav-link page-scroll" href="#learn">Learn</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#callMe">Study</a>
+                    <a class="nav-link page-scroll" href="#study">Study</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#NEEDS TO BE FILLED IN">Music</a>
+                    <a class="nav-link page-scroll" href="#music">Music</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#timer">Timer</a>
@@ -96,10 +96,6 @@
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
-
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">CONTACT</a>
-                </li>
             </ul>
         
         </div>
@@ -176,25 +172,28 @@
     <!-- end of description -->
 
 
-    <!-- Services -->
-    <div id="services" class="cards-2">
+    <!-- learn -->
+    <div id="learn" class="cards-2,hi">
         <div class="container">
-            <div class="row" >
+            <div class="row">
                 <div class="col-lg-12">
-                    <!--<div class="section-title">Start studying</div> -->
-
-                    <!--- START OF YOUTUBE SEARCH BAR -->
                     
-                        <form action="https://www.youtube.com/search" class="center">
-                            <input type="text" name="q">
-                            <input type="submit" value="search" formtarget="_blank">
+                    <!--<div class="section-title">Start studying</div> -->
+                    <div>
+                        <h1 style="text-align:center">Learn with YouTube</h1>
+                    </div>
+                    <!-- START OF YOUTUBE SEARCH BAR -->
+                    
+                        <form action="https://www.youtube.com/search" class="ytSearch"> <!--hi sammy-->
+                            <input type="text" name="q" class="ytSearchBar" placeholder="Search YouTube">
+                            
+                            <input class="ytSearchButton" type="submit" value="Search" formtarget="_blank">
+                            
                         </form>
                     
+                </div>
                     
-                    </form>
-                    </form>
-                    </form>
-                    </form>
+                    
                    
                     
                     
@@ -212,7 +211,7 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
-    <!-- end of services -->
+    <!-- end of learn -->
     
 
     
@@ -267,8 +266,74 @@
 
     
 <!-- Call Me -->
-<div id="callMe" class="form-1">
-    <h1 id="timerThing">25:00</h1>   
+<div id="study" class="form-1">
+ <h2>Here are some good studying websites!</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <a href = "https://www.symbolab.com/" target="_blank"><img src="images/Symbolab.png"style="width:42px;height:42px;></a>
+                <a href = "https://www.symbolab.com/" target="_blank"> Symbolab</a>
+
+		<a href = "https://www.mathway.com/" target="_blank"><img src="images/mathway.png"style="width:42px;height:42px;></a>
+		<a href = "https://www.mathway.com/" target="_blank">Mathway</a>
+
+		<a href = "https://socratic.org/" target="_blank"><img src="images/socratic.webp"style="width:42px;height:42px;></a>
+                <a href = "https://socratic.org/" target="_blank">Socratic</a>
+
+		<a href = "https://www.cymath.com/" target="_blank"><img src="images/cymath.webp"style="width:42px;height:42px;></a>
+                <a href = "https://www.cymath.com/" target="_blank">Cymath</a>
+
+		<a href = "https://www.desmos.com/" target="_blank"><img src="images/desmos.png"style="width:42px;height:42px;></a>
+                <a href = "https://www.desmos.com/" target="_blank">Desmos</a>
+
+		<a href = "https://brainly.com/" target="_blank"><img src="images/brainly.png"style="width:42px;height:42px;></a>
+                <a href = "https://brainly.com/" target="_blank">Brainly</a>
+		
+		<a href = "https://www.slader.com/" target="_blank"><img src="images/slader.png"style="width:42px;height:42px;></a>
+                <a href = "https://www.slader.com/" target="_blank">Slader</a>
+            </div> <!-- end of col -->
+            <div class="col-lg-6">
+               
+                <!-- Call Me Form -->
+                
+                <!-- end of call me form -->
+                
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of form-1 -->
+<!-- end of study -->
+
+
+    <!-- About -->
+    
+    <!-- end of about -->
+
+    <div id="music" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <div class="section-title">Music</div>
+                        <h2>La musica.</h2>
+                        <p>Hola</p>
+                        <p class="testimonial-text">"Our mission here is to offer students the best resources available to allow them study efficiently and meet their learning goals. "</p>
+                        
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/music-pic.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Timer -->
+    <!-- timer(rahul) -->
+
+    <div id="timer" class="form-1">
+        <h1 id="timerThing">25:00</h1>
                 
                 <script>
                     var timerThing = "timerThing";
@@ -303,147 +368,15 @@
                 </script>
                 
                 <button class="timerButton" onclick="countdown(timerThing, 25, 0)">Start studying</button>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                
-            </div> <!-- end of col -->
-            <div class="col-lg-6">
-               
-                <!-- Call Me Form -->
-                
-                <!-- end of call me form -->
-                
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of form-1 -->
-<!-- end of call me -->
-
-
-    <!-- About -->
-    
-    <!-- end of about -->
-
- 
-    <!-- timer(rahul) -->
-
-    <div id="intro" class="basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="text-container">
-                        <div class="section-title">What is EZStudy?</div>
-                        <h2>EZStudy is here to guide you through your study session.</h2>
-                        <p>EZStudy uses the Pomodoro Technique which is a time management method that helps you study for 25 minutes at a time and then take a 5 minutes break.</p>
-                        <p class="testimonial-text">"Our mission here is to offer students the best resources available to allow them study efficiently and meet their learning goals. "</p>
-                        
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
                 <div class="col-lg-7">
                     <div class="image-container">
-                        <img class="img-fluid" src="https://i.ytimg.com/vi/BklGhQYKl30/maxresdefault.jpg" alt="alternative">
+                       
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
     <!-- end of Timer -->
-
-
-    <!-- Contact -->
-    <div id="contact" class="form-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <div class="section-title">CONTACT</div>
-                        <h2>Get In Touch Using The Form</h2>
-                        <p>You can stop by our office for a cup of coffee and just use the contact form below for any questions and inquiries</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="address"><i class="fas fa-map-marker-alt"></i>22nd Innovative Street, San Francisco, CA 94043, US</li>
-                            <li><i class="fas fa-phone"></i><a href="tel:003024630820">+81 720 22 126</a></li>
-                            <li><i class="fas fa-phone"></i><a href="tel:003024630820">+81 720 22 128</a></li>
-                            <li><i class="fas fa-envelope"></i><a href="mailto:office@EZStudy.com">office@EZStudy.com</a></li>
-                        </ul>
-                        <h3>Follow EZStudy On Social Media</h3>
-
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-pinterest fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-behance fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    
-                    <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Your message</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I agree with EZStudy's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
-                    </form>
-                    <!-- end of contact form -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-2 -->
-    <!-- end of contact -->
-
 
     <!-- Footer -->
     <div class="footer">
@@ -452,7 +385,7 @@
                 <div class="col-md-6">
                     <div class="text-container about">
                         <h4>Few Words About EZStudy</h4>
-                        <p class="white">We're passionate about delivering the best business growth services for companies just starting out as startups or industry players that have established their market position a long tima ago.</p>
+                        <p class="white"> We like cookies</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-md-2">

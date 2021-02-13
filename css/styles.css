@@ -43,6 +43,108 @@ Colors:
 ******************************************/
 
 
+
+
+
+
+/* 
+	YouTube Search Button
+*/
+
+.ytSearch{
+	text-align:center;
+}
+
+/*
+.ytSearch{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+*/
+.ytSearchButton {
+	border: none;
+  	color: black;
+  	padding: 15px 32px;
+  	text-align: center;
+ 	text-decoration: none;
+ 	display: inline-block;
+  	font-size: 16px;
+	border-radius: 10px;
+}
+
+.ytSearchBar{
+	line-height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /******************************/
 /*     01. General Styles     */
 /******************************/
@@ -58,8 +160,8 @@ body, p {
 }
 
 .center {
-	margin: auto;
-  	width: 27%;
+	margin: 0 auto;
+	width: 50%;
 	border: 3px solid green;
 }
 
@@ -778,7 +880,8 @@ input[type='checkbox'] {
 /*    04. Header     */
 /*********************/
 .header {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/title-background.jpg') center center no-repeat;
+	background-color: #153e52;
+
 	background-size: cover;
 }
 
@@ -906,7 +1009,9 @@ input[type='checkbox'] {
 	padding-bottom: 1.25rem;	
 	background-color: #fbfbfb;
 }
-
+.hi{
+	background-color: yellow;
+}
 .cards-2 .section-title {
 	margin-bottom: 0.5rem;
 	text-align: center;
@@ -1276,16 +1381,11 @@ input[type='checkbox'] {
 	text-align: center;
 	font-size: 50px;
 }
-.form-1 h2 {
-	margin-bottom:  
-	text-align: center;
-	font-size: 50px;
-}
 .form-1 h1 {
 	margin-bottom: 1.0rem;
 	color: #fff;
 	text-align: center;
-	font-size: 50px;
+	font-size: 70px;
 }
 .form-1 button {
   	border: none;
@@ -1296,7 +1396,6 @@ input[type='checkbox'] {
  	display: inline-block;
   	font-size: 16px;
 	border-radius: 10px;
-	transition-duration: 0.4s;
 }
 .form-1 .list-unstyled .fas {
 	color: #14bf98;
