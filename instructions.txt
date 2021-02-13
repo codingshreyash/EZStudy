@@ -1,6 +1,0 @@
-Instructions for GitHub
-
-save file
-git add .
-git commit -m "commit message"
-git push
