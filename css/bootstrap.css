@@ -1069,6 +1069,8 @@ pre code {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
+  /*
   .order-md-first {
     -ms-flex-order: -1;
     order: -1;
@@ -1166,7 +1168,9 @@ pre code {
     margin-left: 91.666667%;
   }
 }
+*/
 
+/*
 @media (min-width: 992px) {
   .col-lg {
     -ms-flex-preferred-size: 0;
@@ -1510,7 +1514,7 @@ pre code {
     margin-left: 91.666667%;
   }
 }
-
+*/
 .table {
   width: 100%;
   margin-bottom: 1rem;

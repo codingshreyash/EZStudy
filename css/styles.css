@@ -47,6 +47,40 @@ Colors:
 
 
 
+
+/* backgrounds */
+
+#header.zebra{
+	background-color: #153e52;
+}
+#info.zebra{
+	background-color: white;
+}
+#get-started.zebra{
+	background-color: #153e52;
+}
+#to-do-list.zebra{
+	background-color: white;
+}
+#learn.zebra{
+	background-color: #153e52;
+}
+#study.zebra{
+	background-color: white;
+}
+#music.zebra{
+	background-color: #153e52;
+}
+#timer.zebra{
+	background-color: white;
+}
+#About.zebra{
+	background-color: #153e52;
+}
+#Meet-The-Creators.zebra{
+	background-color: white;
+}
+
 /* 
 	YouTube Search Button
 */
@@ -85,6 +119,91 @@ Colors:
 
 
 
+/* TO DO LIST */
+
+.addBtn{
+	border: none;
+  	color: black;
+  	padding: 15px 32px;
+  	text-align: center;
+ 	text-decoration: none;
+ 	display: inline-block;
+  	font-size: 16px;
+	border-radius: 10px;
+}
+
+#to-do-list ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+/*
+#to-do-list .center{
+	text-align:center;
+}
+*/
+#to-do-list ul li {
+	cursor: pointer;
+	position: relative;
+	padding: 12px 8px 12px 40px;
+	background: #eee;
+	font-size: 18px;
+	transition: 0.2s;
+
+	
+  
+	/* make the list items unselectable */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+#to-do-list ul li:nth-child(odd) {
+	background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+#to-do-list ul li:hover {
+	background: #ddd;
+  }
+
+/* When clicked on, add a background color and strike out text */
+#to-do-list ul li.checked {
+	background: #888;
+	color: #fff;
+	text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+#to-do-list ul li.checked::before {
+	content: '';
+	position: absolute;
+	border-color: #fff;
+	border-style: solid;
+	border-width: 0 2px 2px 0;
+	top: 10px;
+	left: 16px;
+	transform: rotate(45deg);
+	height: 15px;
+	width: 7px;
+}
+
+
+
+/* Style the close button */
+.closeBtn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 12px 16px 12px 16px;
+}
+  
+.closeBtn:hover {
+	background-color: #f44336;
+	color: white;
+}
 
 
 
@@ -92,21 +211,20 @@ Colors:
 
 
 
+/* TIMER */
+
+#timer{
+	height: 70%;
+}
+
+#timerThing{
+	
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.hidden{
+	visibility:hidden;
+}
 
 
 
@@ -160,11 +278,17 @@ body, p {
 }
 
 .center {
-	margin: 0 auto;
-	width: 50%;
-	border: 3px solid green;
+	text-align:center;
+	
 }
-
+.center-2{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
 .p-large {
 	font: 400 1.125rem/1.625rem "Open Sans", sans-serif;
 }
@@ -218,7 +342,7 @@ h6 {
 
 a {
 	color: #787976;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a:hover {
@@ -880,7 +1004,7 @@ input[type='checkbox'] {
 /*    04. Header     */
 /*********************/
 .header {
-	background-color: #153e52;
+	/*background-color: #153e52;*/
 
 	background-size: cover;
 }
@@ -909,8 +1033,14 @@ input[type='checkbox'] {
 	margin-right: 0.5rem;
 	margin-bottom: 1.25rem;
 }
-
-
+.left-align{
+	text-align: left;
+	padding: 100px;
+}
+.right-align{
+	text-align: right;
+	padding: 100px;
+}
 /*********************/
 /*     05. Intro     */
 /*********************/
@@ -999,7 +1129,14 @@ input[type='checkbox'] {
 .cards-1 .card-title {
 	margin-bottom: 0.625rem;
 }
-
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+  /*  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+}
 
 /************************/
 /*     07. Services     */
@@ -1007,10 +1144,7 @@ input[type='checkbox'] {
 .cards-2 {
 	padding-top: 6.625rem;	
 	padding-bottom: 1.25rem;	
-	background-color: #fbfbfb;
-}
-.hi{
-	background-color: yellow;
+	/*background-color: #fbfbfb;*/
 }
 .cards-2 .section-title {
 	margin-bottom: 0.5rem;
@@ -1038,7 +1172,7 @@ input[type='checkbox'] {
 	border: 1px solid #ebe8e8;
 	border-bottom-left-radius: 0.375rem;
 	border-bottom-right-radius: 0.375rem;
-	background-color: #fff;
+/*	background-color: #fff; */
 }
 
 .cards-2 h3 {
@@ -1076,7 +1210,7 @@ input[type='checkbox'] {
 	text-align: center;
 }
 
-.cards-2 .btn-solid-reg:hover {
+.cards-2 .btn-solid-reg:Shover {
 	background-color: #fff;
 }
 
@@ -1358,7 +1492,7 @@ input[type='checkbox'] {
 .form-1 {
 	padding-top: 6.625rem;	
 	padding-bottom: 5.625rem;	
-	background-color: #153e52;
+	/*background-color: #153e52;*/
 	text-align: center;
 	font-size: 20px;
 }
@@ -1377,13 +1511,13 @@ input[type='checkbox'] {
 
 .form-1 h2 {
 	margin-bottom: 1.375rem;
-	color: #fff;
+	color: black;
 	text-align: center;
 	font-size: 50px;
 }
 .form-1 h1 {
 	margin-bottom: 1.0rem;
-	color: #fff;
+	color: #000;
 	text-align: center;
 	font-size: 70px;
 }
@@ -1441,6 +1575,105 @@ input[type='checkbox'] {
 	border: 1px solid #fff;
 	font-size: 50px;
 }
+/* Start of Form 2(Made by Rahul). Created for the Music Section
+*/
+.form-2 {
+	padding-top: 6.625rem;	
+	padding-bottom: 5.625rem;	
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 20px;
+}
+
+.form-2 .text-container {
+	margin-bottom: 4rem;
+	text-align: center;
+	font-size: 50px;
+}
+
+.form-2 .section-title {
+	margin-bottom: 0.5rem;
+	text-align: center;
+	font-size: 50px;
+}
+
+.form-2 h2 {
+	margin-bottom: 1.375rem;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	font-size: 50px;
+}
+.form-2 h1 {
+	margin-bottom: 1.0rem;
+	color: #fff;
+	text-align: center;
+	font-size: 70px;
+}
+.form-2 button {
+  	border: none;
+  	color: black;
+  	padding: 15px 32px;
+  	text-align: center;
+ 	text-decoration: none;
+ 	display: inline-block;
+  	font-size: 16px;
+	border-radius: 10px;
+}
+.form-2 .list-unstyled .fas {
+	color: #14bf98;
+	font-size: 0.5rem;
+	line-height: 1.375rem;
+	text-align: center;
+	font-size: 50px;
+}
+
+.form-2 .list-unstyled .media-body {
+	margin-left: 0.625rem;
+	text-align: center;
+	font-size: 50px;
+}
+
+.form-2 .label-control {
+	color: #fff;
+	text-align: center;
+	font-size: 50px;
+}
+
+.form-2 .form-control-input,
+.form-2 .form-control-select {
+	border: 1px solid #39728f;
+	background-color: #2a5d77;
+	color: #fff;
+	font-size: 50px;
+}
+
+.form-2 .form-control-textarea {
+	border: 1px solid #39728f;
+	background-color: #2a5d77;
+	color: #fff;
+	font-size: 50px;
+}
+
+.form-2 .form-control-input:focus,
+.form-2 .form-control-input:hover,
+.form-2 .form-control-select:focus,
+.form-2 .form-control-select:hover,
+.form-2 .form-control-textarea:focus,
+.form-2 .form-control-textarea:hover {
+	border: 1px solid #fff;
+	font-size: 50px;
+}
+
+#lmsgSubmit.h3.text-center.tada.animated,
+#lmsgSubmit.h3.text-center {
+	color: #fff;
+	font-size: 50px;
+}
+
+.form-2 .help-block.with-errors .list-unstyled {
+	
+	font-size: 50px;
+}
 
 #lmsgSubmit.h3.text-center.tada.animated,
 #lmsgSubmit.h3.text-center {
@@ -1452,9 +1685,33 @@ input[type='checkbox'] {
 	
 	font-size: 50px;
 }
-
-
-
+.links-ul ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	color: white;
+}
+.links-ul ul a {
+	color: white;
+	padding: 30px;
+	font-size: 30px;
+}
+.info{
+	margin-left: auto;
+    margin-right: auto;
+}
+.center font{
+/*	color: white; */
+	padding: 30px;
+	font-size: 200px;
+}
+.center a{
+	color: black;
+}
+.center p{
+	color: black;
+}
 /************************/
 /*     12. Projects     */
 /************************/
@@ -1927,7 +2184,7 @@ a:hover.back-to-top {
 .ex-header {
 	padding-top: 8rem;
 	padding-bottom: 5rem;
-	background-color: #153e52;
+	/*background-color: #153e52;*/
 	text-align: center;
 }
 
@@ -2446,7 +2703,10 @@ a:hover.back-to-top {
 		margin-right: 3rem;
 	}
 	/* end of intro */
-
+.font-white{
+	color:white;
+	font-size: 30px;
+}
 
 	/* Description */
 	.cards-1 .card {

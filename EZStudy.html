@@ -34,7 +34,7 @@
 	<link href="css/styles.css" rel="stylesheet">
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="images/logo.png">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
@@ -57,7 +57,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">EZStudy</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="EZStudy.html"><img src="images/favicon.png" alt="alternative"></a>
+        <a class="navbar-brand logo-image" href="EZStudy.html"><img src="images/logo.png" alt="alternative"></a>
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" EZStudy-controls="navbarsExampleDefault" EZStudy-expanded="false" EZStudy-label="Toggle navigation">
@@ -72,10 +72,16 @@
                     <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#intro">Get Started</a>
+                    <a class="nav-link page-scroll" href="#info">Info</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#learn">Learn</a>
+                    <a class="nav-link page-scroll" href="#get-started">Get Started</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#to-do-list">To-Do List</a>
+                 </li>
+                <li class="nav-item">
+                   <a class="nav-link page-scroll" href="#learn">Learn</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#study">Study</a>
@@ -86,7 +92,16 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#timer">Timer</a>
                 </li>
-                <!-- Dropdown Menu -->          
+                
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#About">About</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#Meet-the-Creators">Meet the Creators</a>
+                </li>
+                <!--
+                Dropdown Menu         
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" EZStudy-haspopup="true" EZStudy-expanded="false">ABOUT</a>
                     <div class="dropdown-menu" EZStudy-labelledby="navbarDropdown">
@@ -95,7 +110,8 @@
                         <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
                     </div>
                 </li>
-                <!-- end of dropdown menu -->
+                end of dropdown menu
+            -->
             </ul>
         
         </div>
@@ -104,7 +120,7 @@
 
 
     <!-- Header -->
-    <header id="header" class="header">
+    <header id="header" class="header zebra">
         <div class="header-content">
             <div class="container">
                 <div class="row">
@@ -112,7 +128,7 @@
                         <div class="text-container">
                             <h1>EZStudy <span id="js-rotating"></span></h1>
                             <p class="p-heading p-large">Welcome to the best way to study!</p>
-                            <a class="btn-solid-lg page-scroll" href="#intro">Study Now</a>
+                            <a class="btn-solid-lg page-scroll" href="#info">Study Now</a>
                         </div>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
@@ -128,7 +144,7 @@
     
 
         
-    <div id="intro" class="basic-1">
+    <div id="info" class="basic-1 zebra">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
@@ -151,6 +167,145 @@
     <!-- end of intro -->
 
 
+
+
+    <!-- Get Started -->
+
+
+    
+<div id ="get-started" class="styled-table zebra">
+    <h2 class = "center font-white">Get Started: Select an option<h2>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        
+        table.center {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+        </style>
+        </head>
+        <body>
+        
+        
+        <table class="center">
+        
+          <tr>
+            <td><a class="nav-link page-scroll font-white " href="#learn">Learn</a></td>
+            <td> <a class="nav-link page-scroll font-white" href="#study">Study</a></td>
+        
+          </tr>
+          <tr>
+            <td><a class="nav-link page-scroll font-white" href="#music">Music</a></td>
+            <td><a class="nav-link page-scroll font-white" href="#timer">Start Timer</a></td>
+        
+          </tr>
+        
+        </table>
+        
+        </body>
+    </div>
+    <!-- Start of to do list-->
+    <div id="to-do-list" class="center zebra"> <!-- class="basic-1" -->
+        <div>
+            <h2 style="margin:5px">Create a to-do list</h2>
+            <input type="text" id="myInput" placeholder="Add task...">
+            <button onclick="newElement()" class="addBtn">Add</button>
+        </div>
+
+        <ul id="tdList" class="center">
+            <!--
+            <li class="tdListItem">Hit the gym</li>
+            <li class="tdListItem">Pay bills</li>
+            <li class="tdListItem">Meet George</li>
+            <li class="tdListItem">Buy eggs</li>
+            <li class="tdListItem">Read a book</li>
+            <li class="tdListItem">Organize office</li>
+            -->
+        </ul>
+        
+        <script>
+            // Create a "close" button and append it to each list item
+            var myNodelist = document.getElementById("tdList");
+            for (var i = 0; i < myNodelist.length; i++) {
+              var span = document.createElement("SPAN");
+              var txt = document.createTextNode("\u00D7");
+              span.className = "closeBtn";
+              span.appendChild(txt);
+              myNodelist[i].appendChild(span);
+            }
+            
+            // Click on a close button to hide the current list item
+            var close = document.getElementsByClassName("closeBtn");
+            for (var i = 0; i < close.length; i++) {
+              close[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = "none";
+              }
+            }
+            
+            // Add a "checked" symbol when clicking on a list item
+            var list = document.getElementById('tdList');
+            list.addEventListener("click", function(ev) {
+              if (ev.target.tagName == 'LI') {
+                ev.target.classList.toggle('checked');
+              }
+            }, false);
+            
+
+            
+
+            // Create a new list item when clicking on the "Add" button
+            function newElement() {
+              var li = document.createElement("li");
+              var inputValue = document.getElementById("myInput").value;
+              var t = document.createTextNode(inputValue);
+              li.appendChild(t);
+              if (inputValue === '') {
+                alert("You must write something!");
+              } else {
+                document.getElementById("tdList").appendChild(li);
+              }
+              document.getElementById("myInput").value = "";
+            
+              var span = document.createElement("SPAN");
+              var txt = document.createTextNode("\u00D7");
+              span.className = "closeBtn";
+              span.appendChild(txt);
+              li.appendChild(span);
+
+              li.className = "tdListItem"
+              
+            /*
+              li.addEventListener("click", function(ev) {
+
+
+                li.classList.toggle("checked");
+            }, false);
+            */
+
+            /*
+              li.onclick(function(){
+                li.classList.toggle('checked');
+              });
+              */
+              for (var i = 0; i < close.length; i++) {
+                close[i].onclick = function() {
+                  var div = this.parentElement;
+                  div.style.display = "none";
+                }
+              }
+            }
+        </script>
+         <img src="images/to-do-list.png">
+
+    </div> <!-- end of basic-1 -->
+    <!-- end of intro -->
+    
     <!-- Description -->
     <div class="cards-1">
         <div class="container">
@@ -173,18 +328,19 @@
 
 
     <!-- learn -->
-    <div id="learn" class="cards-2,hi">
+    <div id="learn" class="zebra">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     
                     <!--<div class="section-title">Start studying</div> -->
                     <div>
-                        <h1 style="text-align:center">Learn with YouTube</h1>
+                        <h1 class="center font-white">Learn with YouTube</h1>
+                      
                     </div>
                     <!-- START OF YOUTUBE SEARCH BAR -->
                     
-                        <form action="https://www.youtube.com/search" class="ytSearch"> <!--hi sammy-->
+                        <form action="https://www.youtube.com/search" class="ytSearch center-2"> 
                             <input type="text" name="q" class="ytSearchBar" placeholder="Search YouTube">
                             
                             <input class="ytSearchButton" type="submit" value="Search" formtarget="_blank">
@@ -199,7 +355,8 @@
                     
             
                     
-                    
+                <img src='images/YTSearch.jpg'  height="40%" width="40%" class = "center-2" >
+
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
@@ -266,87 +423,133 @@
 
     
 <!-- Call Me -->
-<div id="study" class="form-1">
- <h2>Here are some good studying websites!</h2>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <a href = "https://www.symbolab.com/" target="_blank"><img src="images/Symbolab.png"style="width:42px;height:42px;></a>
-                <a href = "https://www.symbolab.com/" target="_blank"> Symbolab</a>
+<div id="study" class="form-1 zebra">
+    <h2>Here are some good studying websites!</h2>
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-6">
+           </div>
+       </div>
+       </div>
+       <table class="center">
+       <style>
+           form-1 zebra{
+                color: white;
+                font-size: 30px;
+           }
+       </style>
 
-		<a href = "https://www.mathway.com/" target="_blank"><img src="images/mathway.png"style="width:42px;height:42px;></a>
-		<a href = "https://www.mathway.com/" target="_blank">Mathway</a>
+          <tr>
+            <td><a href = "https://www.symbolab.com/" target="_blank"><img src="images/Symbolab.png"style="width:42px;height:42px;></a>
+                   <a href = "https://www.symbolab.com/" target="_blank"> Symbolab</a>
+            <p>Symbolab helps users to learn, practice, and discover math topics using mathematical symbols and scientific notations as well as text. It also provides step by step solutions.</p></td>
 
-		<a href = "https://socratic.org/" target="_blank"><img src="images/socratic.webp"style="width:42px;height:42px;></a>
-                <a href = "https://socratic.org/" target="_blank">Socratic</a>
-
-		<a href = "https://www.cymath.com/" target="_blank"><img src="images/cymath.webp"style="width:42px;height:42px;></a>
-                <a href = "https://www.cymath.com/" target="_blank">Cymath</a>
-
-		<a href = "https://www.desmos.com/" target="_blank"><img src="images/desmos.png"style="width:42px;height:42px;></a>
-                <a href = "https://www.desmos.com/" target="_blank">Desmos</a>
-
-		<a href = "https://brainly.com/" target="_blank"><img src="images/brainly.png"style="width:42px;height:42px;></a>
-                <a href = "https://brainly.com/" target="_blank">Brainly</a>
-		
-		<a href = "https://www.slader.com/" target="_blank"><img src="images/slader.png"style="width:42px;height:42px;></a>
-                <a href = "https://www.slader.com/" target="_blank">Slader</a>
-            </div> <!-- end of col -->
-            <div class="col-lg-6">
-               
-                <!-- Call Me Form -->
-                
-                <!-- end of call me form -->
-                
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of form-1 -->
-<!-- end of study -->
+            <td><a href = "https://www.mathway.com/" target="_blank"><img src="images/mathway.png"style="width:42px;height:42px;></a>
+                   <a href = "https://www.mathway.com/" target="_blank">Mathway</a>
+            <p>Mathway provides detailed step-by-step solutions for various mathematical subjects like Algebra, Calculus, and Trigonometry, etc.</p></td>
+        
+		<td><a href = "https://www.wolframalpha.com/" target="_blank"><img src="images/wolframalpha.png"style="width:42px;height:42px;></a>
+                   <a href = "https://www.wolframalpha.com/" target="_blank">Wolfram Alpha</a>
+	        <p>Wolfram Alpha computes answers to questions asked by the user. It also provides additional knowledge for the question asked, or on similar topics.</p> </td>
 
 
-    <!-- About -->
+		<td> <a href = "https://www.cymath.com/" target="_blank"><img src="images/cymath.webp"style="width:42px;height:42px;></a>
+                   <a href = "https://www.cymath.com/" target="_blank">Cymath</a>
+           <p>Cymath comes up with an automated step-by-step solution for problems a student has entered.</p></td>
+          </tr>
+          <tr>
+            <td><a href = "https://www.desmos.com/" target="_blank"><img src="images/desmos.png"style="width:42px;height:42px;></a>
+                   <a href = "https://www.desmos.com/" target="_blank">Desmos</a>
+            <p>Desmos is like a virtual graphing calculator. It provides you with graphs for equations entered, the user can plug-in points in a table for x-coordinates, it can graph asymptotes, etc.</p></td>
+
+            <td>  <a href = "https://brainly.com/" target="_blank"><img src="images/brainly.png"style="width:42px;height:42px;></a>
+                   <a href = "https://brainly.com/" target="_blank">Brainly</a>
+            <p>Brainly provides users with solutions to questions other people have asked. It is helpful for various subjects like English, Math, and Science.
+            </p></td>
+
+	<td><a href = "https://www.slader.com/" target="_blank"><img src="images/slader.png"style="width:42px;height:42px;></a>
+                   <a href = "https://www.slader.com/" target="_blank">Slader</a>
+            <p>Slader has textbooks you can select from and choose specific chapters and questions to answer, and it provides you with a solution! You can also enter your question directly to find a solution to the problem.</p></td>
+
+            <td><a href = "https://www.quizlet.com/" target="_blank"><img src="images/quizlet.png"style="width:42px;height:42px;></a>
+                   <a href = "https://www.quizlet.com/" target="_blank">Quizlet</a>
+            <p>Quizlet provides you with flashcards made by people all around the world and helps you learn, practice, and test yourself on the information. You can create your own flash-cards and quizzes too!</p></td>
+        
+          </tr>
+        
+        </table>
+   
+   </div> <!-- end of form-1 -->
+   
+
+
+    <!-- Music -->
     
-    <!-- end of about -->
+    <!-- end of Music -->
 
-    <div id="music" class="basic-1">
-        <div class="container">
+    <div id="music" class="form-2 zebra font-white">
+         
+        <h2>Listen to Music!</h2>
+         <!--    <div class="container">
             <div class="row">
-                <div class="col-lg-5">
-                    <div class="text-container">
-                        <div class="section-title">Music</div>
-                        <h2>La musica.</h2>
-                        <p>Hola</p>
-                        <p class="testimonial-text">"Our mission here is to offer students the best resources available to allow them study efficiently and meet their learning goals. "</p>
+                 
+                 <div class="text-container"> -->
+               <!--   <div class="text-container"> -->
+                <div class = "links-ul-2 font-white">
+                        <p>Please choose from the following options: </p>
+        <ul>
+                        <a href = "https://accounts.spotify.com/en/login/?continue=https:%2F%2Fwww.spotify.com%2Fapi%2Fgrowth%2Fl2l-redirect&_locale=en-US" target="_blank"><img src="images/spotify.png"style="width:42px;height:42px;></a>
+                <a href = "https://accounts.spotify.com/en/login/?continue=https:%2F%2Fwww.spotify.com%2Fapi%2Fgrowth%2Fl2l-redirect&_locale=en-US" target="_blank">Spotify</a>
+
+                        <a href = "https://soundcloud.com/" target="_blank"><img src="images/soundcloud.png"style="width:42px;height:42px;></a>
+                <a href = "https://soundcloud.com/" target="_blank">SoundCloud</a>
+
+                        <a href = "https://music.apple.com/us/browse" target="_blank"><img src="images/AppleMusic.webp"style="width:42px;height:42px;></a>
+                <a href = "https://music.apple.com/us/browse" target="_blank">Apple Music</a>
+
+                        <a href = "https://www.pandora.com/" target="_blank"><img src="images/pandora.png"style="width:42px;height:42px;></a>
+                <a href = "https://www.pandora.com/" target="_blank">Pandora</a>
+
+                         <a href = "https://music.youtube.com/" target="_blank"><img src="images/YoutubeMusic.png"style="width:42px;height:42px;></a>
+                <a href = "https://music.youtube.com/" target="_blank">YouTube Music</a>
+
+                        <a href = "https://music.amazon.com/" target="_blank"><img src="images/AmazonMusic.png"style="width:42px;height:42px;></a>
+                <a href = "https://music.amazon.com/" target="_blank">Amazon Music</a>
                         
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-7">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/music-pic.jpg" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of Timer -->
+                    <!-- </div>  end of text-container -->
+                    <!--    </div> end of col 
+    
+            </div>  end of row 
+        </div> end of container -->
+    </ul>
+</div>
+    </div> <!-- end of form-2 -->
+    <!-- end of Music -->
     <!-- timer(rahul) -->
 
-    <div id="timer" class="form-1">
+    <div id="timer" class="form-1 zebra">
         <h1 id="timerThing">25:00</h1>
                 
                 <script>
+                    
                     var timerThing = "timerThing";
                     var debounce = false;
-                    function countdown(text, minutes, seconds){
+                    var btn = document.getElementById("timerButton");
+                    function countdown(text, Fminutes, Fseconds){
                         if(!debounce){
                             debounce = true;
+                            var minutes = Fminutes;
+                            var seconds = Fseconds;
+                            btn.innerHTML = "Stop studying";
                             setInterval(function() {
                                 if(seconds == 0){
                                     if(minutes == 0){
-                                        //break;
+                                        // Timer done
                                 }else{
                                     minutes -= 1;
+                                    if(minutes < 10){
+                                        minutes = "" + 0 + minutes;
+                                    }
                                     seconds = 59;
                                     
                                     document.getElementById(text).innerHTML = minutes + ":" + seconds + " remaining";
@@ -359,15 +562,40 @@
                                 document.getElementById(text).innerHTML = minutes + ":" + seconds + " remaining";
                             }
                             
+                            btn.onclick(function(){
+                                /*
+                                if(Fseconds < 10){
+                                    Fseconds = "" + 0 + Fseconds;
+                                }
+                                if(Fminutes < 10){
+                                        Fminutes = "" + 0 + Fminutes;
+                                    }
+                                document.getElementById(text).innerHTML = Fminutes + ":"
+                                */
+                                document.getElementById(text).innerHTML = "25:00";
+                                btn.innerHTML = "Stop studying";
+                                break;
+                            });
+
                             },1000);
                             debounce = false;
                         }
                     }
                     
+                    function beginCycle(){
+                        document.getElementById("timerButton").classList.toggle("hiddenBtn");
+                        while(true){
+                            countdown(timerThing, 25, 0);
+                            alert("Study session over! Take a 5 minute break.");
+                            countdown(timerThing, 5, 0);
+                        }
+
+                    }
+
                     
                 </script>
                 
-                <button class="timerButton" onclick="countdown(timerThing, 25, 0)">Start studying</button>
+                <button id="timerButton" onclick="beginCycle()">Start studying</button>
                 <div class="col-lg-7">
                     <div class="image-container">
                        
@@ -378,29 +606,88 @@
     </div> <!-- end of basic-1 -->
     <!-- end of Timer -->
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="text-container about">
-                        <h4>Few Words About EZStudy</h4>
-                        <p class="white"> We like cookies</p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-md-2">
-                    
-                </div> <!-- end of col -->
-                <div class="col-md-2">
-                    
-                </div> <!-- end of col -->
-                <div class="col-md-2">
-                    
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->  
-    <!-- end of footer -->
+
+
+    <!--About-->
+    <div id="About" class="form-1 zebra">
+        <head>
+            <title>W3.CSS</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <style>
+            .mySlides {display:none;}
+            </style>
+            </head>
+            
+            <body>
+            
+            <h2 class="w3-center">About the Pomodoro Technique</h2>
+            
+            <div class="w3-content w3-section" style="max-width:850px">
+              <img class="mySlides" src="images/why.png" style="width:100%">
+              <img class="mySlides" src="images/what.png" style="width:100%">
+              <img class="mySlides" src="images/yea.png" style="width:100%">
+            </div>
+            
+            <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 6000); // Change image every 4 seconds
+            }
+            </script>
+            
+            </body>
+</div>
+
+<!--end of about-->
+
+
+<!--Meet the creators-->
+<div id="#Meet-the-Creators" class="form-1 zebra">
+    <h3 class = "left-align">Shreyash Ranjan</h3>
+    <h3 class = "left-align">Rahul Anantuni</h3>
+    <h3 class = "right-align">Sammy Alashoush</h3>
+    <h3 class = "right-align">Mehak Kasliwal</h3>
+</div>
+<!--
+    
+     Footer 
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-container about">
+                            <h4>Few Words About EZStudy</h4>
+                            <p class="white">Our mission here is to offer students the best resources available to allow them study efficiently and meet their learning goals.</p>
+                        </div> end of text-container
+                    </div> end of col
+                    <div class="col-md-2">
+                        
+                    </div> end of col
+                    <div class="col-md-2">
+                        
+                    </div> end of col
+                    <div class="col-md-2">
+                        
+                    </div> end of col
+                </div> end of row
+            </div> end of container
+        </div>   
+    
+-->
+    
+    
 
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
