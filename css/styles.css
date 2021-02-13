@@ -279,7 +279,13 @@ body, p {
 
 .center {
 	text-align:center;
-	
+}
+.center a{
+	text-align:center;
+	color: white;
+}
+.getStarted a{
+	color: white;
 }
 .center-2{
 	display: block;
@@ -375,7 +381,9 @@ strong {
 	color: #14bf98;
 	font: 500 0.8125rem/1.125rem "Montserrat", sans-serif;
 }
-
+.title-pic{
+	background-image: url("https://www.google.com/search?q=peaceful+background&tbm=isch&hl=en&chips=q:peaceful+background,g_1:sunset:R6FcsZEe57M%3D&sa=X&ved=2ahUKEwj6nLTI2-fuAhUIheAKHRsWBMkQ4lYoBnoECAEQJQ&biw=1448&bih=736#imgrc=RIcb7jKZktX-JM&imgdii=xcgtnkJgs4IYtM");
+}
 .btn-solid-reg {
 	display: inline-block;
 	padding: 1.1875rem 1.875rem 1.1875rem 1.875rem;

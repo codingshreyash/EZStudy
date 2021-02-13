@@ -120,8 +120,8 @@
 
 
     <!-- Header -->
-    <header id="header" class="header zebra">
-        <div class="header-content">
+    <header id="header" class="header zebra title-pic">
+        <div class="header-content title-pic>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -145,7 +145,7 @@
 
         
     <div id="info" class="basic-1 zebra">
-        <div class="container">
+        <div class="container ">
             <div class="row">
                 <div class="col-lg-5">
                     <div class="text-container">
@@ -157,7 +157,7 @@
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-7">
-                    <div class="image-container">
+                    <div class="image-container title-pic">
                         <img class="img-fluid" src="images/title-background.jpg" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
@@ -191,28 +191,35 @@
         </head>
         <body>
         
-        
         <table class="center">
+        <style>
+            color: white;
+        </style>
         
           <tr>
-            <td><a class="nav-link page-scroll font-white " href="#learn">Learn</a></td>
-            <td> <a class="nav-link page-scroll font-white" href="#study">Study</a></td>
+            <td><a class="nav-link page-scroll" href= "#learn">Learn</a></td>
+            <td> <a class="nav-link page-scroll" href= "#study">Study</a></td>
         
           </tr>
           <tr>
-            <td><a class="nav-link page-scroll font-white" href="#music">Music</a></td>
-            <td><a class="nav-link page-scroll font-white" href="#timer">Start Timer</a></td>
+            <td><a class="nav-link page-scroll"  href= "#music">Music</a></td>
+            <td><a class="nav-link page-scroll"  href= "#timer">Start Timer</a></td>
         
           </tr>
         
         </table>
-        
         </body>
+        <img src= 'click.png' width = "100px" height = "100px">
+
+       
     </div>
+
+
+
     <!-- Start of to do list-->
     <div id="to-do-list" class="center zebra"> <!-- class="basic-1" -->
         <div>
-            <h2 style="margin:5px">Create a to-do list</h2>
+            <h2 style="margin:5px">Create a To-Do list</h2>
             <input type="text" id="myInput" placeholder="Add task...">
             <button onclick="newElement()" class="addBtn">Add</button>
         </div>
@@ -488,14 +495,15 @@
     <!-- end of Music -->
 
     <div id="music" class="form-2 zebra font-white">
-         
-        <h2>Listen to Music!</h2>
+        
+        <font-color: red><h2>Listen to Music!</h2></font-color>
+        
          <!--    <div class="container">
             <div class="row">
                  
                  <div class="text-container"> -->
                <!--   <div class="text-container"> -->
-                <div class = "links-ul-2 font-white">
+                <div class = "links-ul-2">
                         <p>Please choose from the following options: </p>
         <ul>
                         <a href = "https://accounts.spotify.com/en/login/?continue=https:%2F%2Fwww.spotify.com%2Fapi%2Fgrowth%2Fl2l-redirect&_locale=en-US" target="_blank"><img src="images/spotify.png"style="width:42px;height:42px;></a>
@@ -530,70 +538,107 @@
     <div id="timer" class="form-1 zebra">
         <h1 id="timerThing">25:00</h1>
                 
-                <script>
+        <script>
                     
-                    var timerThing = "timerThing";
-                    var debounce = false;
-                    var btn = document.getElementById("timerButton");
-                    function countdown(text, Fminutes, Fseconds){
-                        if(!debounce){
-                            debounce = true;
-                            var minutes = Fminutes;
-                            var seconds = Fseconds;
-                            btn.innerHTML = "Stop studying";
-                            setInterval(function() {
-                                if(seconds == 0){
-                                    if(minutes == 0){
-                                        // Timer done
-                                }else{
-                                    minutes -= 1;
-                                    if(minutes < 10){
-                                        minutes = "" + 0 + minutes;
-                                    }
-                                    seconds = 59;
-                                    
-                                    document.getElementById(text).innerHTML = minutes + ":" + seconds + " remaining";
-                                }
+            var timerThing = "timerThing";
+            
+            var btn = document.getElementById("timerButton");
+            var timerDone = false;
+            function countdown(text, Fminutes, Fseconds, whenDone){
+                
+                    var minutes = Fminutes;
+                    var seconds = Fseconds;
+                    
+                    document.getElementById("timerButton").innerHTML = "Stop studying";
+
+                    var timerInt = setInterval(function() {
+                        if(seconds == 0){
+                            if(minutes == 0){
+                                // Timer done
+                                whenDone();
+                                clearInterval(timerInt);
+
+                                timerDone = true;
+                                console.log("hi");
                             }else{
-                                seconds -= 1;
-                                if(seconds < 10){
-                                    seconds = "" + 0 + seconds;
+                                minutes -= 1;
+                                if(minutes < 10){
+                                    minutes = "" + 0 + minutes;
                                 }
+                                seconds = 59;
+                                
                                 document.getElementById(text).innerHTML = minutes + ":" + seconds + " remaining";
                             }
-                            
-                            btn.onclick(function(){
-                                /*
-                                if(Fseconds < 10){
-                                    Fseconds = "" + 0 + Fseconds;
+                        }else{
+                            seconds -= 1;
+                            if(seconds < 10){
+                                seconds = "" + 0 + seconds;
+                            }
+                            document.getElementById(text).innerHTML = minutes + ":" + seconds + " remaining";
+                        }
+                    
+                        
+
+                    },1000);
+                    
+                    
+                
+            }
+
+            
+            
+            function beginCycle(){
+                //document.getElementById("timerButton").classList.toggle("hiddenBtn");
+                //https://www.geeksforgeeks.org/javascript-promises/
+
+                    
+                    /*
+                    let myPromise = new Promise(function(myResolve, myReject) {
+                    // "Producing Code" (May take some time)
+
+                    countdown(timerThing, 1, 0);
+                    resolve("success");
+                    });
+
+                    // "Consuming Code" (Must wait for a fulfilled Promise)
+                    myPromise.then(
+                    function(value) { whenDone() }
+                    );
+                    */
+
+                    countdown(timerThing, 0, 10, whenDoneStudy);
+                    
+
+                function whenDoneStudy(){
+                    timerDone = false;
+                    alert("Study session over! Take a 5 minute break.");
+                    countdown(timerThing, 5, 0, whenDoneBreak);
+                }
+                function whenDoneBreak(){
+                    countdown(timerThing, 0, 10, whenDoneStudy);
+                }
+
+            }
+
+            
+
+
+//document.getElementById("timerButton").onclick(function(){
+                            /*
+                            if(Fseconds < 10){
+                                Fseconds = "" + 0 + Fseconds;
+                            }
+                            if(Fminutes < 10){
+                                    Fminutes = "" + 0 + Fminutes;
                                 }
-                                if(Fminutes < 10){
-                                        Fminutes = "" + 0 + Fminutes;
-                                    }
-                                document.getElementById(text).innerHTML = Fminutes + ":"
-                                */
-                                document.getElementById(text).innerHTML = "25:00";
-                                btn.innerHTML = "Stop studying";
-                                break;
-                            });
+                            document.getElementById(text).innerHTML = Fminutes + ":"
+                            */
+                            //document.getElementById(text).innerHTML = "25:00";
+                            //document.getElementById("timerButton").innerHTML = "Stop studying";
+                            //clearInterval();
+                        //});
 
-                            },1000);
-                            debounce = false;
-                        }
-                    }
-                    
-                    function beginCycle(){
-                        document.getElementById("timerButton").classList.toggle("hiddenBtn");
-                        while(true){
-                            countdown(timerThing, 25, 0);
-                            alert("Study session over! Take a 5 minute break.");
-                            countdown(timerThing, 5, 0);
-                        }
-
-                    }
-
-                    
-                </script>
+        </script>
                 
                 <button id="timerButton" onclick="beginCycle()">Start studying</button>
                 <div class="col-lg-7">
@@ -622,7 +667,7 @@
             
             <body>
             
-            <h2 class="w3-center">About the Pomodoro Technique</h2>
+            <h2 class="w3-center white">About the Pomodoro Technique</h2>
             
             <div class="w3-content w3-section" style="max-width:850px">
               <img class="mySlides" src="images/why.png" style="width:100%">
@@ -654,7 +699,7 @@
 
 
 <!--Meet the creators-->
-<div id="#Meet-the-Creators" class="form-1 zebra">
+<div id="Meet-the-Creators" class="form-1 zebra">
     <h3 class = "left-align">Shreyash Ranjan</h3>
     <h3 class = "left-align">Rahul Anantuni</h3>
     <h3 class = "right-align">Sammy Alashoush</h3>
