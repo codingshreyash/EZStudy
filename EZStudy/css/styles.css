@@ -47,6 +47,15 @@ Colors:
 
 
 
+
+/* backgrounds */
+.zebra:nth-child(even){
+	background-color: #153e52;
+}
+.zebra:nth-child(even){
+	background-color: #153e52;
+}
+
 /* 
 	YouTube Search Button
 */
@@ -101,9 +110,13 @@ Colors:
 #to-do-list ul{
 	margin: 0;
 	padding: 0;
+	list-style-type: none;
 }
-
-
+/*
+#to-do-list .center{
+	text-align:center;
+}
+*/
 #to-do-list ul li {
 	cursor: pointer;
 	position: relative;
@@ -227,9 +240,7 @@ body, p {
 }
 
 .center {
-	margin: 0 auto;
-	width: 50%;
-	border: 3px solid green;
+	text-align:center;
 }
 
 .p-large {
@@ -947,7 +958,7 @@ input[type='checkbox'] {
 /*    04. Header     */
 /*********************/
 .header {
-	background-color: #153e52;
+	/*background-color: #153e52;*/
 
 	background-size: cover;
 }
@@ -1066,7 +1077,14 @@ input[type='checkbox'] {
 .cards-1 .card-title {
 	margin-bottom: 0.625rem;
 }
-
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+  /*  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+}
 
 /************************/
 /*     07. Services     */
@@ -1074,10 +1092,7 @@ input[type='checkbox'] {
 .cards-2 {
 	padding-top: 6.625rem;	
 	padding-bottom: 1.25rem;	
-	background-color: #fbfbfb;
-}
-.hi{
-	background-color: yellow;
+	/*background-color: #fbfbfb;*/
 }
 .cards-2 .section-title {
 	margin-bottom: 0.5rem;
@@ -1105,7 +1120,7 @@ input[type='checkbox'] {
 	border: 1px solid #ebe8e8;
 	border-bottom-left-radius: 0.375rem;
 	border-bottom-right-radius: 0.375rem;
-	background-color: #fff;
+/*	background-color: #fff; */
 }
 
 .cards-2 h3 {
@@ -1143,7 +1158,7 @@ input[type='checkbox'] {
 	text-align: center;
 }
 
-.cards-2 .btn-solid-reg:hover {
+.cards-2 .btn-solid-reg:Shover {
 	background-color: #fff;
 }
 
@@ -1425,7 +1440,7 @@ input[type='checkbox'] {
 .form-1 {
 	padding-top: 6.625rem;	
 	padding-bottom: 5.625rem;	
-	background-color: #153e52;
+	/*background-color: #153e52;*/
 	text-align: center;
 	font-size: 20px;
 }
@@ -1623,37 +1638,22 @@ input[type='checkbox'] {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-  }
-  
-  .links-ul ul {
-	float: center;
-	color: rgb(255, 255, 255);
-  }
-  
-  .links-ul ul a {
+	color: white;
+}
+.links-ul ul a {
 	color: white;
 	padding: 30px;
 	font-size: 30px;
-  }
-  
-  .links-ul-2 ul{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-  }
-  
-  .links-ul-2 ul {
-	float: center;
-	color: rgb(0, 0, 0);
-  }
-  
-  .links-ul-2 ul a {
-	color: rgb(0, 0, 0);
+}
+.info{
+	margin-left: auto;
+    margin-right: auto;
+}
+.center font{
+/*	color: white; */
 	padding: 30px;
-	font-size: 30px;
-  }
-
+	font-size: 200px;
+}
 /************************/
 /*     12. Projects     */
 /************************/
@@ -2126,7 +2126,7 @@ a:hover.back-to-top {
 .ex-header {
 	padding-top: 8rem;
 	padding-bottom: 5rem;
-	background-color: #153e52;
+	/*background-color: #153e52;*/
 	text-align: center;
 }
 
