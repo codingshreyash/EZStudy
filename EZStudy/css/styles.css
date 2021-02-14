@@ -47,13 +47,46 @@ Colors:
 
 
 
+/* info header css*/
+#info-h2 {
+	font-size: 35px;
+	padding
+}
+
+
 
 /* backgrounds */
-.zebra:nth-child(even){
+
+#header.zebra{
+	background-color: #153e52;
+	background-image: "images/fishing-pic.jpg";
+}
+#info.zebra{
+	background-color: white;
+}
+#get-started.zebra{
 	background-color: #153e52;
 }
-.zebra:nth-child(even){
+#to-do-list.zebra{
+	background-color: white;
+}
+#learn.zebra{
 	background-color: #153e52;
+}
+#study.zebra{
+	background-color: white;
+}
+#music.zebra{
+	background-color: #153e52;
+}
+#timer.zebra{
+	background-color: white;
+}
+#About.zebra{
+	background-color: #153e52;
+}
+#Meet-The-Creators.zebra{
+	background-color: white;
 }
 
 /* 
@@ -186,7 +219,24 @@ Colors:
 
 
 
+/* TIMER */
 
+#timer{
+	height: 70%;
+}
+
+#timerThing{
+	
+}
+
+#timer-heading{
+	padding-top:5%;
+	font-weight:bold;
+}
+
+.hidden{
+	visibility:hidden;
+}
 
 
 
@@ -243,6 +293,28 @@ body, p {
 	text-align:center;
 }
 
+.centerImg{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.center a{
+	text-align:center;
+	color: white;
+}
+.getStarted a{
+	color: white;
+}
+.center-2{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
 .p-large {
 	font: 400 1.125rem/1.625rem "Open Sans", sans-serif;
 }
@@ -296,7 +368,7 @@ h6 {
 
 a {
 	color: #787976;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a:hover {
@@ -328,8 +400,13 @@ strong {
 .section-title {
 	color: #14bf98;
 	font: 500 0.8125rem/1.125rem "Montserrat", sans-serif;
+	font-size: 55px;
+	padding-bottom: 20px;
+	text-decoration: underline;
 }
-
+.title-pic{
+	background-image: url("https://www.google.com/search?q=peaceful+background&tbm=isch&hl=en&chips=q:peaceful+background,g_1:sunset:R6FcsZEe57M%3D");
+}
 .btn-solid-reg {
 	display: inline-block;
 	padding: 1.1875rem 1.875rem 1.1875rem 1.875rem;
@@ -959,7 +1036,7 @@ input[type='checkbox'] {
 /*********************/
 .header {
 	/*background-color: #153e52;*/
-
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/fishing-pic.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -987,8 +1064,14 @@ input[type='checkbox'] {
 	margin-right: 0.5rem;
 	margin-bottom: 1.25rem;
 }
-
-
+.left-align{
+	text-align: left;
+	padding: 100px;
+}
+.right-align{
+	text-align: right;
+	padding: 100px;
+}
 /*********************/
 /*     05. Intro     */
 /*********************/
@@ -1001,10 +1084,11 @@ input[type='checkbox'] {
 	margin-bottom: 3rem;
 }
 
+/*
 .basic-1 .section-title {
 	margin-bottom: 0.5rem;
 }
-
+*/
 .basic-1 h2 {
 	margin-bottom: 1.375rem;
 }
@@ -1085,7 +1169,12 @@ input[type='checkbox'] {
     min-width: 400px;
   /*  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
 }
-
+.styled-table h1 {
+    font-size: 50px;
+}
+#started-heading{
+	padding-top: 30px;
+}
 /************************/
 /*     07. Services     */
 /************************/
@@ -1094,11 +1183,12 @@ input[type='checkbox'] {
 	padding-bottom: 1.25rem;	
 	/*background-color: #fbfbfb;*/
 }
+/*
 .cards-2 .section-title {
 	margin-bottom: 0.5rem;
 	text-align: center;
 }
-
+*/
 .cards-2 h2 {
 	margin-bottom: 3.25rem;
 	text-align: center;
@@ -1438,7 +1528,7 @@ input[type='checkbox'] {
 /*     11. Call Me    */
 /**********************/
 .form-1 {
-	padding-top: 6.625rem;	
+	padding-top: 6.625rem;
 	padding-bottom: 5.625rem;	
 	/*background-color: #153e52;*/
 	text-align: center;
@@ -1450,22 +1540,23 @@ input[type='checkbox'] {
 	text-align: center;
 	font-size: 50px;
 }
-
+/*
 .form-1 .section-title {
 	margin-bottom: 0.5rem;
 	text-align: center;
 	font-size: 50px;
 }
-
+*/
 .form-1 h2 {
+	padding-top: 10px;
 	margin-bottom: 1.375rem;
-	color: #fff;
+	color: black;
 	text-align: center;
 	font-size: 50px;
 }
 .form-1 h1 {
 	margin-bottom: 1.0rem;
-	color: #fff;
+	color: #000;
 	text-align: center;
 	font-size: 70px;
 }
@@ -1538,16 +1629,16 @@ input[type='checkbox'] {
 	text-align: center;
 	font-size: 50px;
 }
-
+/*
 .form-2 .section-title {
 	margin-bottom: 0.5rem;
 	text-align: center;
 	font-size: 50px;
 }
-
+*/
 .form-2 h2 {
 	margin-bottom: 1.375rem;
-	color: rgb(0, 0, 0);
+	color: white;
 	text-align: center;
 	font-size: 50px;
 }
@@ -1654,6 +1745,12 @@ input[type='checkbox'] {
 	padding: 30px;
 	font-size: 200px;
 }
+.center a{
+	color: black;
+}
+.center p{
+	color: black;
+}
 /************************/
 /*     12. Projects     */
 /************************/
@@ -1661,7 +1758,7 @@ input[type='checkbox'] {
 	padding-top: 6.5rem;
 	padding-bottom: 7rem;
 }
-
+/*
 .filter .section-title {
 	margin-bottom: 0.5rem;
 }
@@ -1670,7 +1767,7 @@ input[type='checkbox'] {
 .filter .section-title {
 	text-align: center;
 }
-
+*/
 .filter h2 {
 	margin-bottom: 3.25rem;
 }
@@ -1931,11 +2028,11 @@ input[type='checkbox'] {
 .counter .image-container img {
 	border-radius: 0.25rem;
 }
-
+/*
 .counter .section-title {
 	margin-bottom: 0.5rem;
 }
-
+*/
 .counter h2 {
 	margin-bottom: 1.375rem;
 }
@@ -1993,11 +2090,11 @@ input[type='checkbox'] {
 .form-2 .text-container {
 	margin-bottom: 3rem;
 }
-
+/*
 .form-2 .section-title {
 	margin-bottom: 0.5rem;
  }
-
+*/
 .form-2 h2 {
 	margin-bottom: 1.375rem;
 }
@@ -2645,8 +2742,15 @@ a:hover.back-to-top {
 		margin-right: 3rem;
 	}
 	/* end of intro */
-
-
+.font-white{
+	color:white;
+	font-size: 30px;
+}
+.font-white-2{
+	color:white;
+	font-size: 20px;
+	text-align: center;
+}
 	/* Description */
 	.cards-1 .card {
 		max-width: 21rem;
