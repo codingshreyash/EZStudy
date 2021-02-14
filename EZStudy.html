@@ -34,7 +34,7 @@
 	<link href="css/styles.css" rel="stylesheet">
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="images/lightbulb.png">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
@@ -121,7 +121,7 @@
 
     <!-- Header -->
     <header id="header" class="header zebra title-pic">
-        <div class="header-content title-pic>
+        <div class="header-content title-pic">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -150,7 +150,7 @@
                 <div class="col-lg-5">
                     <div class="text-container">
                         <div class="section-title">What is EZStudy?</div>
-                        <h2>EZStudy is here to guide you through your study session.</h2>
+                        <h2 id="info-h2">EZStudy is here to guide you through your study session.</h2>
                         <p>EZStudy uses the Pomodoro Technique which is a time management method that helps you study for 25 minutes at a time and then take a 5 minutes break.</p>
                         <p class="testimonial-text">"Our mission here is to offer students the best resources available to allow them study efficiently and meet their learning goals. "</p>
                         
@@ -174,12 +174,12 @@
 
     
 <div id ="get-started" class="styled-table zebra">
-    <h2 class = "center font-white">Get Started: Select an option<h2>
+    <h1 id  = "started-heading" class = "center font-white">Get Started: Select an option<h1>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
         table, th, td {
-          border: 1px solid black;
+          border: 3px solid white;
           border-collapse: collapse;
         }
         
@@ -193,23 +193,27 @@
         
         <table class="center">
         <style>
-            color: white;
+            #gsData{
+                color: white;
+                font-size: 300%;
+            
+            }
         </style>
         
           <tr>
-            <td><a class="nav-link page-scroll" href= "#learn">Learn</a></td>
-            <td> <a class="nav-link page-scroll" href= "#study">Study</a></td>
+            <td style="height: 150px"><a id="gsData" class="nav-link page-scroll" href= "#learn">Learn</a></td>
+            <td style="height:150px"> <a id="gsData" class="nav-link page-scroll" href= "#study">Study</a></td>
         
           </tr>
           <tr>
-            <td><a class="nav-link page-scroll"  href= "#music">Music</a></td>
-            <td><a class="nav-link page-scroll"  href= "#timer">Start Timer</a></td>
+            <td style="height:150px" ><a id="gsData" class="nav-link page-scroll"  href= "#music">Music</a></td>
+            <td style="height:150px" ><a id="gsData" class="nav-link page-scroll"  href= "#timer">Timer</a></td>
         
           </tr>
         
         </table>
         </body>
-        <img src= 'click.png' width = "100px" height = "100px">
+        <img  src= 'images/click.png' width = "300px" height = "300px" class="centerImg">
 
        
     </div>
@@ -219,7 +223,8 @@
     <!-- Start of to do list-->
     <div id="to-do-list" class="center zebra"> <!-- class="basic-1" -->
         <div>
-            <h2 style="margin:5px">Create a To-Do list</h2>
+            <h1 style="margin:5px">Create a To-Do list</h1>
+            
             <input type="text" id="myInput" placeholder="Add task...">
             <button onclick="newElement()" class="addBtn">Add</button>
         </div>
@@ -496,7 +501,7 @@
 
     <div id="music" class="form-2 zebra font-white">
         
-        <font-color: red><h2>Listen to Music!</h2></font-color>
+        <h2>Listen to Music!</h2>
         
          <!--    <div class="container">
             <div class="row">
@@ -554,12 +559,8 @@
                     var timerInt = setInterval(function() {
                         if(seconds == 0){
                             if(minutes == 0){
-                                // Timer done
                                 whenDone();
                                 clearInterval(timerInt);
-
-                                timerDone = true;
-                                console.log("hi");
                             }else{
                                 minutes -= 1;
                                 if(minutes < 10){
@@ -588,7 +589,7 @@
             
             
             function beginCycle(){
-                //document.getElementById("timerButton").classList.toggle("hiddenBtn");
+                document.getElementById("timerButton").classList.toggle("hidden");
                 //https://www.geeksforgeeks.org/javascript-promises/
 
                     
@@ -606,15 +607,15 @@
                     );
                     */
 
-                    countdown(timerThing, 0, 10, whenDoneStudy);
-                    
+                countdown(timerThing, 0, 10, whenDoneStudy);
+                
 
                 function whenDoneStudy(){
-                    timerDone = false;
                     alert("Study session over! Take a 5 minute break.");
-                    countdown(timerThing, 5, 0, whenDoneBreak);
+                    countdown(timerThing, 0, 9, whenDoneBreak);
                 }
                 function whenDoneBreak(){
+                    alert("Break over! Study for 25 minutes.");
                     countdown(timerThing, 0, 10, whenDoneStudy);
                 }
 
@@ -673,6 +674,8 @@
               <img class="mySlides" src="images/why.png" style="width:100%">
               <img class="mySlides" src="images/what.png" style="width:100%">
               <img class="mySlides" src="images/yea.png" style="width:100%">
+              <img class="mySlides" src="images/graph.png" style="width:100%">
+              <img class="mySlides" src="images/faq.png" style="width:100%">
             </div>
             
             <script>
