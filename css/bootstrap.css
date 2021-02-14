@@ -1074,7 +1074,7 @@ pre code {
   .order-md-first {
     -ms-flex-order: -1;
     order: -1;
-  }
+  }y
   .order-md-last {
     -ms-flex-order: 13;
     order: 13;
@@ -1170,7 +1170,7 @@ pre code {
 }
 */
 
-/*
+
 @media (min-width: 992px) {
   .col-lg {
     -ms-flex-preferred-size: 0;
@@ -1514,7 +1514,7 @@ pre code {
     margin-left: 91.666667%;
   }
 }
-*/
+
 .table {
   width: 100%;
   margin-bottom: 1rem;

@@ -50,7 +50,7 @@ Colors:
 /* info header css*/
 #info-h2 {
 	font-size: 35px;
-	padding
+	padding-top: 20px;
 }
 
 
@@ -403,6 +403,7 @@ strong {
 	font-size: 55px;
 	padding-bottom: 20px;
 	text-decoration: underline;
+	line-height:60px;
 }
 .title-pic{
 	background-image: url("https://www.google.com/search?q=peaceful+background&tbm=isch&hl=en&chips=q:peaceful+background,g_1:sunset:R6FcsZEe57M%3D");
