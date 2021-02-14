@@ -50,6 +50,7 @@ Colors:
 /* info header css*/
 #info-h2 {
 	font-size: 35px;
+	padding
 }
 
 
@@ -58,6 +59,7 @@ Colors:
 
 #header.zebra{
 	background-color: #153e52;
+	background-image: "images/fishing-pic.jpg";
 }
 #info.zebra{
 	background-color: white;
@@ -227,6 +229,10 @@ Colors:
 	
 }
 
+#timer-heading{
+	padding-top:5%;
+	font-weight:bold;
+}
 
 .hidden{
 	visibility:hidden;
@@ -395,11 +401,11 @@ strong {
 	color: #14bf98;
 	font: 500 0.8125rem/1.125rem "Montserrat", sans-serif;
 	font-size: 55px;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 	text-decoration: underline;
 }
 .title-pic{
-	background-image: url("https://www.google.com/search?q=peaceful+background&tbm=isch&hl=en&chips=q:peaceful+background,g_1:sunset:R6FcsZEe57M%3D&sa=X&ved=2ahUKEwj6nLTI2-fuAhUIheAKHRsWBMkQ4lYoBnoECAEQJQ&biw=1448&bih=736#imgrc=RIcb7jKZktX-JM&imgdii=xcgtnkJgs4IYtM");
+	background-image: url("https://www.google.com/search?q=peaceful+background&tbm=isch&hl=en&chips=q:peaceful+background,g_1:sunset:R6FcsZEe57M%3D");
 }
 .btn-solid-reg {
 	display: inline-block;
@@ -1030,7 +1036,7 @@ input[type='checkbox'] {
 /*********************/
 .header {
 	/*background-color: #153e52;*/
-
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/fishing-pic.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -1522,7 +1528,7 @@ input[type='checkbox'] {
 /*     11. Call Me    */
 /**********************/
 .form-1 {
-	padding-top: 6.625rem;	
+	padding-top: 6.625rem;
 	padding-bottom: 5.625rem;	
 	/*background-color: #153e52;*/
 	text-align: center;
@@ -1542,8 +1548,9 @@ input[type='checkbox'] {
 }
 */
 .form-1 h2 {
+	padding-top: 10px;
 	margin-bottom: 1.375rem;
-	color: white;
+	color: black;
 	text-align: center;
 	font-size: 50px;
 }
@@ -2739,7 +2746,11 @@ a:hover.back-to-top {
 	color:white;
 	font-size: 30px;
 }
-
+.font-white-2{
+	color:white;
+	font-size: 20px;
+	text-align: center;
+}
 	/* Description */
 	.cards-1 .card {
 		max-width: 21rem;
